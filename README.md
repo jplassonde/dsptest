@@ -54,7 +54,7 @@ To test the filters, both the input and output signals are captured with a logic
 Of course the harmonics are all over the place and the lack of anti-aliasing filter is apparent. With a more complex signal the filter can be seen into action: filtering out most of the noise, removing the high frequency components and rounding the mid-frequency square waves by filtering out their higher harmonics:
 
 ![figure2](https://user-images.githubusercontent.com/36741050/58102297-bffaec80-7be9-11e9-8a0f-a2a37d78e046.png)
-*Bottom: Input - Top: filtered signal
+*Bottom: Input - Top: filtered signal*
 
 ---
 ##### IIR SOS
