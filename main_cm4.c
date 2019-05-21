@@ -88,7 +88,6 @@ void run_filter() {
     q15_t pState[4*MWSPT_NSEC];
     q15_t * coeffs = convertCoeffs();
     q31_t * input;
-    q31_t * dest;
     arm_biquad_cascade_df1_init_q15(&iirInstance, MWSPT_NSEC, coeffs, pState, 1);
     
     hardware_config();
@@ -96,7 +95,6 @@ void run_filter() {
         for (int i = 0; i < 3; i++) {
             while(!flag);
             flag = 0;
-            dest = (q31_t*)buffers[i];
             input = (q31_t*)buffers[i];
             for (int j = 0; j < 16; j++) {
                *(*&input) = __SADD16(*input++, 0x04000400);
