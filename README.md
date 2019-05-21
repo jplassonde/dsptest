@@ -55,6 +55,7 @@ Of course the harmonics are all over the place and the lack of anti-aliasing fil
 
 ![figure2](https://user-images.githubusercontent.com/36741050/58102297-bffaec80-7be9-11e9-8a0f-a2a37d78e046.png)
 *Bottom: Input - Top: filtered signal
+
 ---
 ##### IIR SOS
 
