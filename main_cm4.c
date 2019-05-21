@@ -20,6 +20,7 @@ void ADC_BuffFullInt() {
     NVIC_ClearPendingIRQ(ADCBuffInt_cfg.intrSrc);
     ++flag;
 }
+
 void hardware_config() {
     Opamp_Start();
     ADC_Start();
