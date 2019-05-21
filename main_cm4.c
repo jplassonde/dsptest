@@ -51,7 +51,6 @@ void hardware_config() {
     Cy_DMA_Channel_Enable(DACDMA_HW, DACDMA_DW_CHANNEL);
 }
 
-
 #ifdef USE_FIR
 void run_filter() {
     arm_fir_instance_q15 firInstance;
@@ -67,8 +66,8 @@ void run_filter() {
         }
     }
 }
-#else
 
+#else
 q15_t * convertCoeffs() {
     q15_t * coeffs = (q15_t *)malloc(6*MWSPT_NSEC*sizeof(q15_t));
     
@@ -82,7 +81,6 @@ q15_t * convertCoeffs() {
     }
     return coeffs;
 }
-
 
 void run_filter() {
     arm_biquad_casd_df1_inst_q15 iirInstance;
@@ -109,7 +107,6 @@ void run_filter() {
                *(*&input) = __SADD16(*input++, 0x04000400);
                *(*&input) = __SADD16(*input++, 0x04000400);
             }
-            
             arm_biquad_cascade_df1_q15(&iirInstance, buffers[i],buffers[i], 256);
         }
     }
